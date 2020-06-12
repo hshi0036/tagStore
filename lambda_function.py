@@ -10,7 +10,6 @@ from io import BytesIO
 import uuid
 
 
-url = "https://fit5225-a2.s3.amazonaws.com/yolov3-tiny.weights"
 conf = 0.5 #The minimum probability of filtering weak detection：
 # Any output with confidence less than this value is eliminated
 nms = 0.4 
@@ -18,7 +17,7 @@ nms = 0.4
 
 
 s3 = boto3.client('s3')
-BUCKET_NAME = 'fit5225-a2'
+BUCKET_NAME = 'bucket-s3a2'
 # data = s3.get_object(Bucket=BUCKET_NAME, Key='yolov3-tiny.weights')
 s3.download_file(BUCKET_NAME, 'yolov3-tiny.weights', '/tmp/yolov3-tiny.weights')
 s3.download_file(BUCKET_NAME, 'yolov3-tiny.cfg', '/tmp/yolov3-tiny.cfg')
