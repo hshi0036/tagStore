@@ -30,7 +30,7 @@ function upload() {
 
   // Use S3 ManagedUpload class as it supports multipart uploads
   s3.upload({
-      Key: fileName,
+      Key: "images/" + fileName,
       Body: file,
       ACL: "public-read"
   }, function(err, data) {

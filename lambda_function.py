@@ -109,7 +109,7 @@ def lambda_handler(event, context):
     record = event['Records'][0]
     bucket = record['s3']['bucket']['name']
     key = record['s3']['object']['key']
-    url = "https://fit5225-a2.s3.amazonaws.com/" + key
+    url = "https://fit5225-a2.s3.amazonaws.com/images/" + key
     
     s3.download_file(BUCKET_NAME, key, '/tmp/input.jpg')
     # url = "https://fit5225-a2.s3.amazonaws.com/" + "image1.png"
