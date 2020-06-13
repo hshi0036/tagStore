@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <!-- **DO THIS**: -->
+    <!--   Replace SDK_VERSION_NUMBER with the current SDK version number -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.685.0.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+       function getHtml(template) {
+          return template.join('\n');
+       }
+    </script>
+  </head>
+  <body>
+    <h1>upload image</h1>
+    <div id="app"></div>
+    <div>
+      <input id="photoupload" type="file" accept="image/*">
+      <button id="upload" onclick="upload()">upload</button>
+    </div>
+  </body>
+</html
