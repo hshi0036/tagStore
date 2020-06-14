@@ -2,7 +2,7 @@ import json
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('images')
+table = dynamodb.Table('tagStoreDB')
 
 
 def lambda_handler(event, context):
