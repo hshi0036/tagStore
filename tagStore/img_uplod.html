@@ -3,6 +3,7 @@
   <head>
      <!-- **DO THIS**: -->
     <!--   Replace SDK_VERSION_NUMBER with the current SDK version number -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.685.0.min.js"></script>
     <script src="app.js"></script>
     <script>
@@ -11,48 +12,24 @@
        }
     </script>
     <style type="text/css">
-      body {
-    background-image: url("images/login/loginBac.jpg");;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
- 
-#login_frame {
-    width: 400px;
-    height: 260px;
-    padding: 13px;
- 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -200px;
-    margin-top: -200px;
- 
-    background-color: rgba(240, 255, 255, 0.5);
- 
-    border-radius: 10px;
-    text-align: center;
-}
+      body{
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <div id="login_frame">
- 
-        <input id="photoupload" type="file" accept="image/*">
-        <button id="upload" onclick="upload()">upload</button>
-    </div>
-
+    <button onclick="window.location='index.html'" style="float: right">Logout</button>
     <h1>upload image</h1>
-    <div id="app"></div>
+
     <div>
       <div class="img_upload">
         <input id="photoupload" type="file" accept="image/*">
         <button id="upload" onclick="upload()">upload</button>
       </div>
-      <div class="find image">
+     <!--  <div class="find image">
         <input id="find"/>
         <button id="upload" onclick="search()">submit</button>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
